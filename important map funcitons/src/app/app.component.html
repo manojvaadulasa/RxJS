@@ -1,0 +1,27 @@
+<h1>RxJS playground</h1>
+<div>
+  <strong>The original values being used for the map RxJS operator are as follows:-</strong>
+</div>
+<div *ngFor="let values of theVariableOne$ | async">
+  The integer value is "{{ values.integer }}"
+  and the word value is "{{ values.word }}"
+</div>
+<br>
+<div>
+  <strong>Using only the Map operator to map just the integers.</strong>
+</div>
+<div *ngFor="let values of theMapOperator$ | async">
+  {{ values }}
+</div>
+<div>
+  <strong>Using the Map operator to map the integers and mapping once again to multiply the values by 10</strong>
+</div>
+<div *ngFor="let values of theDoubleMap$ | async">
+  {{ values }}
+</div>
+<div>
+  <strong>Using the Map operator to map the integers and using filter function along with map to filter a few values.</strong>
+</div>
+<div *ngFor="let values of theMapOperatorWithFilter$ | async">
+  {{ values }}
+</div>
